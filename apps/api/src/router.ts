@@ -1,6 +1,6 @@
-import { Book, connectDB } from "@antdtech/db";
-import { z } from "zod";
-import { publicProcedure, router } from "./trpc";
+import { Book, connectDB } from '@antdtech/db';
+import { z } from 'zod';
+import { publicProcedure, router } from './trpc';
 
 export const appRouter = router({
   books: {
@@ -9,7 +9,7 @@ export const appRouter = router({
         z.object({
           page: z.number().min(1).default(1),
           limit: z.number().min(1).max(100).default(10),
-        })
+        }),
       )
       .query(async ({ input }) => {
         await connectDB();
