@@ -12,7 +12,7 @@ copy packages\db\.env.example packages\db\.env
 ```
 ## Setup & Run
 ```bash
-git clone <repo-url>
+git clone https://github.com/kiranrao21/rmt-technical-assessment.git
 npm install
 cd docker
 docker compose -f mongo-compose.yml up -d
